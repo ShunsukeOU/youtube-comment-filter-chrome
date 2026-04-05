@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Comment Filter",
+  "version": "1.0",
+  "description": "YouTubeの不快なコメントや外国語のコメントを非表示にします。",
+  "permissions": ["storage"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "設定を開く"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
